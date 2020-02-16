@@ -1,0 +1,46 @@
+{% extends 'base.html' %} {% load static %} {% block content %}
+<div class="header--left">
+  <span class=" font--medium font--bold ">NEXT <span class="font--lion font--bold font--medium">X</span> 멋쟁이 사자처럼</span><br/>
+  <span class=" font--medium font--light">지원서 작성<span>
+  <div class="bar--short"></div>
+</div>
+<div class="body--question">
+<form method="POST">
+  {% csrf_token %}
+  <label for="id_q1">
+    1. {{ form.q1.label}}
+  </label>
+  {{ form.q1 }}
+  <div class="counter"><span class="count">0</span>자<span>(공백포함)</span>/<span>2000자</span></div>
+  <label for="id_q2">
+    2. {{ form.q2.label}}
+  </label>
+  {{ form.q2 }}
+  <div class="counter"><span class="count">0</span>자<span>(공백포함)</span>/<span>2000자</span></div>
+  <label for="id_q3">
+    3. {{ form.q3.label}}
+  </label>
+  {{ form.q3 }}
+  <div class="counter"><span class="count">0</span>자<span>(공백포함)</span>/<span>2000자</span></div>
+  <label for="id_q4">
+    4. {{ form.q4.label}}
+  </label>
+  {{ form.q4 }}
+  <div class="counter"><span class="count">0</span>자<span>(공백포함)</span>/<span>2000자</span></div>
+  <label for="id_q5">
+    5. {{ form.q5.label}}
+  </label>
+  {{ form.q5 }}
+  <div class="counter"><span class="count">0</span>자<span>(공백포함)</span>/<span>2000자</span></div>
+  <label for="id_q6">
+    6. {{ form.q6.label}}
+  </label>
+  {{ form.q6 }}
+  <div class="btn-boxing2">
+    <a href="{% url 'index' %}"><div class="btn--back">뒤 로</div></a>
+    <button type="submit">제출하기</button>
+  </div>
+</form>
+</div>
+<script type="text/javascript" src="{% static 'counter.js' %}"></script>
+{% endblock %}

@@ -1,0 +1,56 @@
+{% extends 'base.html' %} {% load static %} {% block content %}
+<div class="header--left">
+  <span class=" font--medium font--bold ">NEXT <span class="font--lion font--bold font--medium">X</span> 멋쟁이 사자처럼</span><br/>
+  <span class=" font--medium font--light">로그인<span>
+  <div class="bar--short"></div>
+</div>
+
+<div class="body--left">
+  <span class="font--xsmall">지원 시 유의사항 ></span>
+  <p class="paragraph">
+    1. 지원을 위해서는 회원가입과 로그인이 필요합니다.<br />
+    2. 본 절차는 고려대학교 경영대학 소속 학회 'NEXT X 멋쟁이사자처럼' 회원가입을 위한 것이며
+    <br/> &nbsp;&nbsp;&nbsp;&nbsp;중앙 멋쟁이사자처럼 회원가입과는 별개임을 알려드립니다.<br/>
+    3. 지원서는 제출 후 마감 기한<span class="font--regular">[ 3월 19일(목) 오후 10시 ]</span> 전까지 자유롭게 수정하실 수 있습니다.<br />
+    4. 면접은<span class="font--regular"> [ 3월 21일(토)/3월 22일(일) 10:00-20:00 ] </span>에 실시될 예정이며 회원가입 시, 양일 중 가능한 날짜에 체크해주시기 바랍니다.<br/>
+    5. <span class="font--regular">주요 일정 중 <a href="{% url 'schedule' %}"><span class="font--regular font--lion">필수참여(확인하기)</span></a> 행사에 참석할 수 없는 경우 지원이 제한됩니다.</span><br/>
+    * <u>기타 문의 사항은 'NEXT X 멋쟁이사자처럼'<a
+      href="https://www.facebook.com/LikelionKU/"
+      target="_blank"
+      ><span class="font--lion font--regular"> 페이스북 페이지</span></a
+    > 에서 문의해주시기 바랍니다.</u>
+  </p>
+    <span class="font--xsmall">선발 절차 ></span>
+  <p  class="paragraph">
+      1. 서류 지원이 마감되면, 검토 후 지원자에게 <span class='font--regular'>[ 3월 20일(금) 오후 6시 ]</span>까지 1차 합격 여부가 문자로 전달됩니다. <br />
+      2. 합격자에게는 면접 일자와 시간이 함께 전달됩니다.<br />
+      &nbsp;&nbsp;&nbsp;&nbsp;(면접 시간은 임의 배정되며 필요한 경우 운영진과 협의를 통해 조율하실 수 있습니다.)<br/>
+      3. 면접 후 <span class='font--regular'>[ 3월 23일(월) ]</span>에 최종 합격 여부가 공개되며, 합격자는 고려대 멋쟁이 사자처럼 OT를 바탕으로 활동을 시작합니다.<br />
+  </p>
+    <span class="font--xsmall">모집일정  ></span>
+    <p class="paragraph">
+      - 서류모집 기간 : 2020.03.01(일) ~ 2020.03.19(목) 21:59<br />
+      - 서류합격 발표 : 2020.03.20(금) 18시 <br />
+      - 개별면접 일정 : 2020.03.21(토) / 03.22(일) 10 ~ 20시 <br />
+      - 최종합격 발표 : 2020.03.23(월) <br/>
+      <!-- - 고대 멋사 OT : 2020.03.26(목) <span class="font--regular font--lion">(필수참여)</span> <br />
+      - 고대 멋사 MT : 2020.03.28(토) ~ 2020.03.29(일) <span class="font--regular font--lion">(필수참여)</span> <br />
+      - 아이디어톤 : 2020.04.11(토)<span class="font--regular font--lion"> (필수참여)</span> <br/>
+      - 미니 해커톤 : 2020.06.06(토) ~ 2020.06.07(일)<span class="font--regular font--lion"> (필수참여) -->
+    </p>
+</div>
+<div class="body--left">
+  <form method="POST" action="{% url 'signin' %}">
+    {% csrf_token %}
+    <h1 class="font--mont font--medium font--light">LOGIN</h1>
+    <div class="form-boxing">
+      <!-- <label for="id_email">{{form.email.label}}</label> -->
+      {{form.email}}
+      <!-- <label for="id_password">비밀번호</label> -->
+      {{form.password}}
+      <button type="submit" >로그인</button>
+        <a href="{% url 'signup' %}"><div class="signup">회원가입</div></a>
+    </div>
+  </form>
+</div>
+{% endblock %}

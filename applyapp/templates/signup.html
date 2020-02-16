@@ -1,0 +1,84 @@
+{% extends 'base.html' %} {% load static %} {% block content %}
+<div class="header--left">
+  <span class=" font--medium font--bold ">NEXT <span class="font--lion font--bold font--medium">X</span> 멋쟁이 사자처럼</span><br/>
+  <span class=" font--medium font--light">회원가입<span>
+  <div class="bar--short"></div>
+</div>
+<div class="body--signup">
+<form method="POST">
+  {% csrf_token %} 
+  <div class="error-message">
+    {% if form.errors%}
+    {% if form.email.errors%}
+    <p>{{ form.email.errors}}</p>
+    {% endif%}
+    {% if form.password2.errors %}
+    <p>{{form.password2.errors}}</p>
+    {% endif %}
+    {% endif %}
+  </div>
+  <div class="form-wrap1">
+    <div class="form-wrap__labels">
+      <label for="id_email">이메일(ID)</label>
+      <label for="id_password1">비밀번호</label>
+      <label for="id_password2">비밀번호 확인</label>
+      <label for="id_name">이름</label>
+      <label for="id_student_id">학번</label>
+      <label for="id_department">전공</label>
+      <label for="id_department2">이중/융합전공</label>
+      <label for="id_phone">연락처</label>
+    </div>
+    <div class="form-wrap__forms">
+    {{ form.email }}
+    {{ form.password1 }}
+    {{ form.password2 }}
+    {{ form.name }}
+    {{ form.student_id }}
+    {{ form.department }}
+    {{ form.department2 }} 
+    {{ form.phone }} 
+    </div>
+  </div>
+  <div class="form-wrap2">
+      <label for="id_interview_date">면접 가능 날짜</label>
+      {{ form.interview_date }} 
+      <div class="inline">
+        <label for="id_agree" id="label_for_agree"> (필수)개인 정보 수집 및 이용에 동의합니다.</label>
+        {{ form.agree }} 
+      </div>
+  </div>
+  <div class="form-wrap3">
+    <div class="info-box">
+      <p class="paragraph2">
+    <!-- 멋쟁이 사자처럼이 운영하는 apply.likelion.org는 개인정보를 중요하게 생각하며 “정보통신 이용촉진 및 정보보호등에 관한 법률“, “개인정보보호법 제15조” 등 법령상의 개인정보보호 규정을 준수하며, 관련 법령에 의거한 개인정보를 취급(처리)하고 있습니다. -->
+1. 개인정보의 수집방법 및 이용목적<br><br>
+○ 수집방법 : '우리사이트' 기존사용자 및 회원가입을 통한 수집<br>
+○ 이용목적 : '우리사이트' 의 회원 가입 서비스 이용 및 회원관리 확인/수정/삭제 등 포털시스템 이용에 필요한 최소한의 정보를 수집합니다.<br/>
+○ 시스템목록 : 고려대학교 멋쟁이 사자처럼 8기 모집 지원 시스템<br><br>
+
+2. 개인정보의 수집항목<br><br>
+NEXT X 멋쟁이 사자처럼에서는 기본적인 회원 서비스 제공을 위한 필수정보와,<br> 정보주체 각각의 기호와 필요에 맞는 서비스를 제공하기 위한 선택정보로 구분하여 다음의 정보를 수집하고 있습니다.<br>
+
+○ 수집항목 : 성명, 아이디, 비밀번호, 성별, 학번, 휴대폰번호, 이메일주소, 학과, 면접일자<br>
+○ '우리사이트'을 이용할 경우 접속IP, 방문일시 등의 정보는 시스템에 의해 자동적으로 수집·저장 됩니다.<br><br>
+
+3. 개인정보의 보유 및 이용기간<br><br>
+
+멋쟁이 사자처럼에서는 정보주체의 회원 가입일로부터 서비스를 제공하는 기간 동안에 한하여 <br/>멋쟁이 사자처럼 서비스를 이용하기 위한 최소한의 개인정보를 보유 및 이용하게 됩니다.<br>
+○ 회원가입 등을 통해 개인정보의 수집·이용, 제공 등에 대해 동의하신 내용은 언제든지 철회 할 수 있습니다.<br>
+○ 회원 탈퇴를 요청하거나 개인정보의 수집 및 이용에 대한 동의를 철회하는 경우, 보유/이용기간이 종료한 경우 등의 사유발생시 당해 개인정보를 지체없이 파기합니다.<br><br>
+
+4. 동의 거부 권리 안내<br><br>
+○ 정보주체는 개인정보 수집·이용 동의를 거부 할 수 있으며, 이 경우 '우리사이트'을 사용하는데 제한이 있을 수 있습니다.<br>
+※ 수집된 개인정보는 포털시스템을 이용하기 위한 정보 이외의 용도로 이용되지 않으며, 제 3자에게 제공하지 않습니다.
+
+    </p>  
+  </div>
+    <div class="btn-boxing">
+      <a href="{% url 'signin' %}"><div class="btn--back">뒤 로</div></a>
+      <button type="submit" >회원가입</button>
+    </div>
+  </div>
+</form>
+</div>
+{% endblock %}

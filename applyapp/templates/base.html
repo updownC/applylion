@@ -1,0 +1,59 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Lobster|Montserrat:800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-jp.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="{% static 'favicon.png' %}"
+    />
+    <title>Recruit-LION 8</title>
+  </head>
+  <body>
+    <nav class="font--light">
+      <a href="{% url 'index' %}">
+        <span class="logo font--small"
+          >LIKE<span class="font--mont font--small font--lion">LION</span></span
+        >
+      </a>
+      <!-- <a href="{% url 'index' %}">
+        <span class="logo font--small">
+          NEXT
+          <span class="font--lion font--mont font--small ">X</span>
+          LIKELION</span
+        >
+      </a> -->
+      <div class="nav__btn-box ">
+        {% if user.is_authenticated%}
+        <p>{{user.name}}님 안녕하세요</p>
+        <a href="{% url 'logout' %}" class="nav__btn">로그아웃</a>
+        {% endif %}
+      </div>
+    </nav>
+    <section>
+      {% block content %} {% endblock %}
+    </section>
+    <footer>
+      <span>Copyright &copy; 2020 Next X Likelion All rights reserved. </span>
+    </footer>
+  </body>
+</html>
