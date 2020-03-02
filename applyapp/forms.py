@@ -14,7 +14,7 @@ class UserQuestionForm(forms.ModelForm):
                    'q3': forms.Textarea(attrs={'class': 'form-control2'}),
                    'q4': forms.Textarea(attrs={'class': 'form-control2'}),
                    'q5': forms.Textarea(attrs={'class': 'form-control2'}),
-                   'q6': forms.Textarea(attrs={'class': 'form-control3', 'placeholder': '예) 20-1학기 경영전략학회 *****에서 활동할 예정입니다. '}),
+                   'q6': forms.Textarea(attrs={'class': 'form-control3', 'placeholder': '예) 20-1학기 경영전략학회 *****에서 활동할 예정입니다 / 19-1학기 학과 코딩 소모임에서 활동했습니다 등 '}),
                    }
 
     def save(self, commit=True):

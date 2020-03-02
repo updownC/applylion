@@ -15,8 +15,8 @@ def complete(request):
     return render(request, 'complete.html')
 
 
-def schedule(request):
-    return render(request, 'schedule.html')
+def info(request):
+    return render(request, 'info.html')
 
 
 def signin(request):

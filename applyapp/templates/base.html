@@ -43,6 +43,7 @@
         >
       </a> -->
       <div class="nav__btn-box ">
+        <a href="{% url 'info' %}" class="nav__btn">지원안내</a>
         {% if user.is_authenticated%}
         <p>{{user.name}}님 안녕하세요</p>
         <a href="{% url 'logout' %}" class="nav__btn">로그아웃</a>

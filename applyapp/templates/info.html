@@ -1,0 +1,26 @@
+{% extends 'base.html' %} {% load static %} {% block content %}
+<div class="body--complete">
+  <h1 class="font--large">- 주요 일정 -</h1>
+  <br /><br />
+  <p class="paragraph">
+    - 서류모집 기간 : 2020.03.01(일) ~ 2020.03.19(목) 21:59<br />
+    - 서류합격 발표 : 2020.03.20(금) 18시 <br />
+    - 개별면접 일정 : 2020.03.21(토) / 03.22(일) 10시 ~ 20시 <br />
+    - 최종합격 발표 : 2020.03.23(월) <br /><br />
+    - 고대 멋사 OT : 2020.03.26(목)
+    <span class="font--regular font--lion">(필수참여)</span> <br />
+    - 아이디어톤 : 2020.05.30(토)<span class="font--regular font--lion">
+      (필수참여)
+    </span>
+    <br />
+    - 설-고 연합 아이디어톤/해커톤 : 방학 중 실시 예정 <br />
+    - 미니 해커톤 : 2020.06.06(토) ~ 2020.06.07(일)
+    <span class="font--regular font--lion"> (필수참여) </span> <br /><br />
+    - <span class="font--regular">정기 세션</span>: 매주 월/목 19시 ~ 22시
+    <span class="font--regular font--lion">(필수참여)</span> <br />
+  </p>
+  <br />
+  <a href="{% url 'index' %}"><div class="btn--back">홈으로 돌아가기</div></a>
+</div>
+
+{% endblock %}
