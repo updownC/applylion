@@ -568,3 +568,24 @@ form button:hover {
 .body--complete a {
     color: #f8af00;
 }
+
+.body--info {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 800px;
+    padding: 0 5%;
+    box-sizing: border-box;
+}
+
+.info-column {
+    width: 40%;
+}
+
+.info-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}

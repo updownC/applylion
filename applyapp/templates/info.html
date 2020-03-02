@@ -1,26 +1,53 @@
 {% extends 'base.html' %} {% load static %} {% block content %}
-<div class="body--complete">
-  <h1 class="font--large">- 주요 일정 -</h1>
-  <br /><br />
-  <p class="paragraph">
-    - 서류모집 기간 : 2020.03.01(일) ~ 2020.03.19(목) 21:59<br />
-    - 서류합격 발표 : 2020.03.20(금) 18시 <br />
-    - 개별면접 일정 : 2020.03.21(토) / 03.22(일) 10시 ~ 20시 <br />
-    - 최종합격 발표 : 2020.03.23(월) <br /><br />
-    - 고대 멋사 OT : 2020.03.26(목)
-    <span class="font--regular font--lion">(필수참여)</span> <br />
-    - 아이디어톤 : 2020.05.30(토)<span class="font--regular font--lion">
-      (필수참여)
-    </span>
+<div class="body--info">
+  <div class="info-column">
+    <h1 class="font--medium">- 주요 일정 -</h1>
     <br />
-    - 설-고 연합 아이디어톤/해커톤 : 방학 중 실시 예정 <br />
-    - 미니 해커톤 : 2020.06.06(토) ~ 2020.06.07(일)
-    <span class="font--regular font--lion"> (필수참여) </span> <br /><br />
-    - <span class="font--regular">정기 세션</span>: 매주 월/목 19시 ~ 22시
-    <span class="font--regular font--lion">(필수참여)</span> <br />
-  </p>
-  <br />
-  <a href="{% url 'index' %}"><div class="btn--back">홈으로 돌아가기</div></a>
+    <p class="paragraph">
+      - 서류모집 기간 : 2020.03.01(일) ~ 2020.03.19(목) 21:59<br />
+      - 서류합격 발표 : 2020.03.20(금) 18시 <br />
+      - 개별면접 일정 : 2020.03.21(토) / 03.22(일) 10시 ~ 20시 <br />
+      - 최종합격 발표 : 2020.03.24(화) <br />
+      - 고대 멋사 OT : 2020.03.26(목)
+      <span class="font--regular font--lion">(필수참여)</span> <br />
+      - 고대 멋사 MT : 코로나 바이러스로 인한 잠정연기.<br /><br />
+      - 아이디어톤 : 2020.05.30(토)<span class="font--regular font--lion">
+        (필수참여)
+      </span>
+      <br />
+      - 설-고 연합 아이디어톤/해커톤 : 방학 중 실시 예정 <br />
+      - 미니 해커톤 : 2020.06.06(토) ~ 2020.06.07(일)
+      <span class="font--regular font--lion"> (필수참여) </span> <br /><br />
+      - <span class="font--regular">정기 세션</span>: 매주 월/목 19시 ~ 22시
+      <span class="font--regular font--lion">(필수참여)</span> <br />
+      - 스페셜 세션 : 토요일 1~2회/월 <br />
+      - 정기 세션의 경우
+      <span class="font--regular">3회 이상 결석 시</span>, 학회 활동을 이어가실
+      수 없습니다.
+    </p>
+    <br />
+  </div>
+  <div class="info-column info-column2">
+    <h1 class="font--medium">- 합격자 과제 안내 -</h1>
+    <br />
+    <p class="paragraph">
+      - 3월 24일 최종합격자가 발표되면, 4월 2일 첫 세션까지 과제가 주어집니다.
+      <br />- 해당 과제에 대한 내용은 최종 합격일에 안내될 예정입니다.
+    </p>
+    <br />
+    <h1 class="font--medium">- 오픈카톡 링크 -</h1>
+    <br />
+    <p class="paragraph">
+      - 'NEXT X 멋쟁이사자처럼'<a
+        href="https://open.kakao.com/o/gM0P4PZb"
+        target="_blank"
+        ><span class="font--lion font--regular effect--a">
+          카카오톡 오픈채팅</span
+        ></a
+      >
+    </p>
+    <br />
+    <a href="{% url 'index' %}"><div class="btn--back">홈으로 돌아가기</div></a>
+  </div>
 </div>
-
 {% endblock %}
