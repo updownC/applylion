@@ -10,8 +10,8 @@ class QuestionAdmin(admin.ModelAdmin):
     form = UserQuestionForm
     add_form = UserQuestionForm
 
-    list_display = ('user',)
-    list_filter = ('user',)
+    list_display = ('user', 'name',)
+    list_filter = ('user', )
     fieldsets = (
         (None, {'fields': ('user', )}),
         ('Questions', {'fields': ('q1', 'q2', 'q3', 'q4', 'q5', 'q6')}),
