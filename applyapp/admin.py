@@ -5,6 +5,8 @@ from django.contrib.auth.admin import UserAdmin as BaseUserAdmin
 from .forms import UserChangeForm, UserCreationForm, UserQuestionForm
 from .models import User, Question
 
+class QuestionInline(admin.StackedInline):
+    model = Question
 
 class QuestionAdmin(admin.ModelAdmin):
     form = UserQuestionForm
@@ -20,6 +22,7 @@ class QuestionAdmin(admin.ModelAdmin):
 
 
 class UserAdmin(BaseUserAdmin):
+    inlines = (QuestionInline,)
     form = UserChangeForm
     add_form = UserCreationForm
 
