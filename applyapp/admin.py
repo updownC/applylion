@@ -5,14 +5,16 @@ from django.contrib.auth.admin import UserAdmin as BaseUserAdmin
 from .forms import UserChangeForm, UserCreationForm, UserQuestionForm
 from .models import User, Question
 
+
 class QuestionInline(admin.StackedInline):
     model = Question
+
 
 class QuestionAdmin(admin.ModelAdmin):
     form = UserQuestionForm
     add_form = UserQuestionForm
 
-    list_display = ('user', 'name',)
+    list_display = ('user', )
     list_filter = ('user', )
     fieldsets = (
         (None, {'fields': ('user', )}),

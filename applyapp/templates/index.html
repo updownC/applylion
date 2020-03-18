@@ -1,10 +1,18 @@
 {% extends 'base.html' %} {% load static %} {% block content %}
 <div class="container">
+  {% if messages %} {% for message in messages %}
+  <script>
+    alert("{{message}}");
+  </script>
+  {% endfor %} {%endif%}
   <div class="header--center">
     <br />
     <br />
     <h1 class="font--mont font--xlarge">HACK YOUR LIFE</h1>
     <p class="font--medium font--light">멋쟁이 사자처럼 고려대학교 8기 모집</p>
+    <p class="font--small font--ku">
+      18일(수) 오프라인 설명회는 취소되었습니다.
+    </p>
   </div>
   <div class="body--center">
     <br /><br />
