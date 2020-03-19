@@ -11,7 +11,7 @@
     <h1 class="font--mont font--xlarge">HACK YOUR LIFE</h1>
     <p class="font--medium font--light">멋쟁이 사자처럼 고려대학교 8기 모집</p>
     <p class="font--small font--ku">
-      18일(수) 오프라인 설명회는 취소되었습니다.
+      지원마감되었습니다!
     </p>
   </div>
   <div class="body--center">
@@ -21,18 +21,18 @@
       지원마감 : 2020.03.19 21:59까지
     </p>
     <br />
-    <a href="{% url 'edit' user.question.user_id %}">
+    <!-- <a href="{% url 'edit' user.question.user_id %}">
       <div class="boxing--reverse">지원서 수정</div>
-    </a>
+    </a> -->
     {% else %}
-    <p>
+    <!-- <p>
       지원서는 한 번만 작성하실 수 있으며, 마감 기한 전까지 수정 가능합니다!
     </p>
     <br />
     <br />
     <a href="{% url 'question' %}">
       <div class="boxing">지원서 작성</div>
-    </a>
+    </a> -->
     {% endif %} {% else %}
     <a href="{% url 'signin' %}">
       <div class="boxing">로그인/회원가입</div>

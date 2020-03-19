@@ -45,7 +45,8 @@ class User(AbstractBaseUser):
         verbose_name='전공', max_length=150, null=True)
     department2 = models.CharField(
         verbose_name='이중/융합전공', max_length=150, null=True, blank=True)
-    name = models.CharField(verbose_name='이름', max_length=50, null=True)
+    name = models.CharField(
+        verbose_name='이름', max_length=50, null=True)
     phone = models.CharField(verbose_name='연락처', max_length=100, null=True)
     interview_date = models.CharField(
         max_length=10, verbose_name='인터뷰 가능일', choices=CHOICES, null=True)

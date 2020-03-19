@@ -9,7 +9,7 @@ from django.http import HttpResponse
 
 def index(request):
     messages.info(
-        request, '18일(수) 오프라인 설명회는 취소되었으며, 고려대학교 멋쟁이 사자처럼 페이스북 페이지에 관련 프레젠테이션이 업로드되었습니다. 기타 문의 사항은 고대멋사 오픈카톡을 이용해주세요!')
+        request, '지원 마감 되었습니다.')
     return render(request, 'index.html')
 
 
