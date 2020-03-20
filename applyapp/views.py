@@ -64,8 +64,8 @@ def question(request):
     return render(request, 'question.html', {'form': form})
 
 
-def questionEdit(request, user_id):
-    question = Question.objects.get(user_id=user_id)
+def questionEdit(request, user):
+    question = Question.objects.get(user=user)
     if request.method == 'POST':
         form = UserQuestionForm(request.POST, instance=question)
         if form.is_valid():

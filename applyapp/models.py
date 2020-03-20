@@ -75,7 +75,7 @@ class User(AbstractBaseUser):
 
 class Question(models.Model):
     user = models.OneToOneField(
-        User, on_delete=models.CASCADE)
+        User, on_delete=models.CASCADE, to_field="email")
     q1 = models.TextField(verbose_name='지원동기 (1000자 내외)', max_length=2000)
     q2 = models.TextField(
         verbose_name='향후 5년 계획과, 10년 후의 나의 모습을 이야기해 주세요. (1000자 내외)', max_length=2000)
