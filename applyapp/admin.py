@@ -17,7 +17,7 @@ class QuestionAdmin(admin.ModelAdmin):
     list_display = ('user', )
     list_filter = ('user', )
     fieldsets = (
-        (None, {'fields': ('user', )}),
+        (None, {'fields': ('user',)}),
         ('Questions', {'fields': ('q1', 'q2', 'q3', 'q4', 'q5', 'q6')}),
         # ('Permissions', {'fields': ('is_admin',)}),
     )
